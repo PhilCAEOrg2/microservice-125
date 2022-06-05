@@ -118,7 +118,9 @@ public class ResTest {
     try {
       c.setLogin(AnonymousAgentImpl.IDENTIFIER, "");
       ClientResponse result = c.sendRequest("GET", mainPath + "/test", "{
- "hi": "test" 
+  "id": 1,
+  "name": "test",
+  "flag": true
 }");
     
       System.out.println("Result of 'test$HTTP_Method_Name$': " + result.getResponse().trim());
